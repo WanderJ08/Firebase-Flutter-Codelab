@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "465503566707",
+    "project_id": "fir-flutter-codelab-c1dda",
+    "storage_bucket": "fir-flutter-codelab-c1dda.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465503566707:android:b77dc02a5610bb47f72306",
+        "android_client_info": {
+          "package_name": "wanderj.codelab.fi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMXJE6RplwZe32xCmoxrro1jRgzwaxBeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
