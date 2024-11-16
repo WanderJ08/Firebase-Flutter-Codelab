@@ -8,7 +8,6 @@ import 'guest_book.dart'; // new
 import 'app_state.dart'; // new
 import 'src/authentication.dart'; // new
 import 'src/widgets.dart';
-import 'guest_book.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
