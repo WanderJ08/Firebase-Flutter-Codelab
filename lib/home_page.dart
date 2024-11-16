@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart' // new
         PhoneAuthProvider; // new
 import 'package:flutter/material.dart'; // new
 import 'package:provider/provider.dart'; // new
-
+import 'guest_book.dart'; // new
 import 'app_state.dart'; // new
 import 'src/authentication.dart'; // new
 import 'src/widgets.dart';
@@ -44,6 +44,8 @@ class HomePage extends StatelessWidget {
           const Paragraph(
             'Join us for a day full of Firebase Workshops and Pizza!',
           ),
+          const Header('Discussion'),
+          GuestBook(addMessage: (message) => print(message)),
         ],
       ),
     );
