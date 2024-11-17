@@ -13,6 +13,7 @@ class GuestBook extends StatefulWidget {
 
   final FutureOr<void> Function(String message) addMessage;
   final List<GuestBookMessage> messages;
+
   @override
   State<GuestBook> createState() => _GuestBookState();
 }
@@ -54,8 +55,8 @@ class _GuestBookState extends State<GuestBook> {
                       _controller.clear();
                     }
                   },
-                  child: Row(
-                    children: const [
+                  child: const Row(
+                    children: [
                       Icon(Icons.send),
                       SizedBox(width: 4),
                       Text('SEND'),
@@ -72,5 +73,11 @@ class _GuestBookState extends State<GuestBook> {
         const SizedBox(height: 8),
       ],
     );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
