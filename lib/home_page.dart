@@ -1,3 +1,7 @@
+// Copyright 2022 The Flutter Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'package:firebase_auth/firebase_auth.dart' // new
     hide
         EmailAuthProvider,
@@ -24,7 +28,6 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 8),
           const IconAndDetail(Icons.calendar_today, 'October 30'),
           const IconAndDetail(Icons.location_city, 'San Francisco'),
-          // Add from here
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
                 loggedIn: appState.loggedIn,
@@ -32,7 +35,6 @@ class HomePage extends StatelessWidget {
                   FirebaseAuth.instance.signOut();
                 }),
           ),
-          // to here
           const Divider(
             height: 8,
             thickness: 1,
@@ -53,13 +55,12 @@ class HomePage extends StatelessWidget {
                   GuestBook(
                     addMessage: (message) =>
                         appState.addMessageToGuestBook(message),
+                    messages: appState.guestBookMessages,
                   ),
                 ],
               ],
             ),
           ),
-          const Header('Discussion'),
-          GuestBook(addMessage: (message) => print(message)),
         ],
       ),
     );
